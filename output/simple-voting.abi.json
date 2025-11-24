@@ -1,0 +1,140 @@
+{
+    "buildInfo": {
+        "contractCrate": {
+            "name": "simple-voting",
+            "version": "0.0.0"
+        },
+        "framework": {
+            "name": "multiversx-sc",
+            "version": "0.63.0"
+        }
+    },
+    "name": "SimpleVoting",
+    "constructor": {
+        "docs": [
+            "Initializes the voting contract with a fixed bet price",
+            "and a list of options."
+        ],
+        "inputs": [
+            {
+                "name": "bet_price",
+                "type": "BigUint"
+            },
+            {
+                "name": "options",
+                "type": "variadic<bytes>",
+                "multi_arg": true
+            }
+        ],
+        "outputs": []
+    },
+    "endpoints": [
+        {
+            "docs": [
+                "User votes for a given option index.",
+                "- voting must be open",
+                "- address can only vote once"
+            ],
+            "name": "vote",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "option_index",
+                    "type": "u32"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "docs": [
+                "Only owner can close the voting."
+            ],
+            "name": "closeVoting",
+            "mutability": "mutable",
+            "inputs": [],
+            "outputs": []
+        },
+        {
+            "name": "getOwner",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "Address"
+                }
+            ]
+        },
+        {
+            "name": "isOpen",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "getOptions",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "variadic<bytes>",
+                    "multi_result": true
+                }
+            ]
+        },
+        {
+            "docs": [
+                "Returns all votes as a list of BigUint (one per option, ordered)."
+            ],
+            "name": "getVotes",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "variadic<BigUint>",
+                    "multi_result": true
+                }
+            ]
+        },
+        {
+            "docs": [
+                "Returns the fixed bet price (per vote/bet)."
+            ],
+            "name": "getBetPrice",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "BigUint"
+                }
+            ]
+        }
+    ],
+    "events": [
+        {
+            "identifier": "vote_cast",
+            "inputs": [
+                {
+                    "name": "voter",
+                    "type": "Address",
+                    "indexed": true
+                },
+                {
+                    "name": "option_index",
+                    "type": "u32",
+                    "indexed": true
+                },
+                {
+                    "name": "new_total_for_option",
+                    "type": "BigUint"
+                }
+            ]
+        }
+    ],
+    "esdtAttributes": [],
+    "hasCallback": false,
+    "types": {}
+}

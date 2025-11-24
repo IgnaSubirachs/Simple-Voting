@@ -1,0 +1,1 @@
+\\?\C:\Users\User\Desktop\simple-voting\target\wasm32v1-none\release\simple_voting_wasm.wasm: C:\Users\User\Desktop\simple-voting\src\simple_voting.rs C:\Users\User\Desktop\simple-voting\wasm\src\lib.rs

@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\simple-voting\target\debug\deps\colored-2b8db5cd610b18c9.d: C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\lib.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\color.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\control.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\error.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\style.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\customcolors.rs
+
+C:\Users\User\Desktop\simple-voting\target\debug\deps\libcolored-2b8db5cd610b18c9.rlib: C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\lib.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\color.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\control.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\error.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\style.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\customcolors.rs
+
+C:\Users\User\Desktop\simple-voting\target\debug\deps\libcolored-2b8db5cd610b18c9.rmeta: C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\lib.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\color.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\control.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\error.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\style.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\customcolors.rs
+
+C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\lib.rs:
+C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\color.rs:
+C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\control.rs:
+C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\error.rs:
+C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\style.rs:
+C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\colored-3.0.0\src\customcolors.rs:
