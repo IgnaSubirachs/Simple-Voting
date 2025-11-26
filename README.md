@@ -57,13 +57,63 @@ Hem creat un script automàtic per facilitar aquesta tasca a la xarxa de proves 
 ./deploy.ps1
 ```
 
-### Com Interactuar
+### Script CLI per a Interacció Ràpida
+
+Hem creat un script de línia de comandes (`votacions.sh`) que facilita totes les interaccions amb el contracte:
+
+```bash
+# Donar permisos d'execució (només la primera vegada)
+chmod +x votacions.sh
+
+# Veure totes les comandes disponibles
+./votacions.sh help
+
+# Exemples d'ús:
+./votacions.sh vote-yes      # Votar Sí
+./votacions.sh vote-no       # Votar No
+./votacions.sh get-votes     # Consultar resultats
+./votacions.sh close-voting  # Tancar votació (només propietari)
+```
+
+> **Nota**: Abans d'usar l'script, actualitza la variable `CONTRACT_ADDRESS` dins del fitxer amb l'adreça del teu contracte desplegat.
+
+### Interacció Manual (Comandes mxpy)
+
+Si prefereixes usar les comandes directament sense l'script:
 
 **Veure el Contracte a l'Explorador:**
 Pots veure totes les transaccions i l'estat del contracte al [Devnet Explorer](https://devnet-explorer.multiversx.com/).
 
-**Votar (Exemple per consola):**
+#### 1. Votar "Sí" (Primera opció - índex 0)
 Per votar per la primera opció ("Sí"):
 ```bash
 mxpy contract call <ADREÇA_DEL_CONTRACTE> --function "vote" --arguments 0 --value 10000000000000000 --pem devnet.pem --gas-limit 10000000 --proxy https://devnet-gateway.multiversx.com --chain D --send
+```
+
+#### 2. Votar "No" (Segona opció - índex 1)
+Per votar per la segona opció ("No"):
+```bash
+mxpy contract call <ADREÇA_DEL_CONTRACTE> --function "vote" --arguments 1 --value 10000000000000000 --pem devnet.pem --gas-limit 10000000 --proxy https://devnet-gateway.multiversx.com --chain D --send
+```
+
+> **Nota**: L'argument numèric (0 o 1) indica l'índex de l'opció. Les opcions es defineixen durant el desplegament i comencen des de 0.
+
+#### 3. Consultar els Resultats
+Per veure quants vots té cada opció:
+```bash
+mxpy contract query <ADREÇA_DEL_CONTRACTE> --function "getVotes" --proxy https://devnet-gateway.multiversx.com
+```
+
+#### 4. Tancar la Votació (Només Propietari)
+El propietari del contracte pot tancar la votació per impedir nous vots:
+```bash
+mxpy contract call <ADREÇA_DEL_CONTRACTE> --function "closeVoting" --pem devnet.pem --gas-limit 10000000 --proxy https://devnet-gateway.multiversx.com --chain D --send
+```
+
+> **Important**: Només l'adreça que va desplegar el contracte (propietari) pot executar aquesta funció. Un cop tancada, no es poden emetre més vots.
+
+#### 5. Verificar si la Votació està Oberta
+Per comprovar si la votació encara està activa:
+```bash
+mxpy contract query <ADREÇA_DEL_CONTRACTE> --function "isOpen" --proxy https://devnet-gateway.multiversx.com
 ```
