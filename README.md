@@ -117,3 +117,9 @@ Per comprovar si la votació encara està activa:
 ```bash
 mxpy contract query <ADREÇA_DEL_CONTRACTE> --function "isOpen" --proxy https://devnet-gateway.multiversx.com
 ```
+
+---
+
+## 📄 Llicència
+
+Aquest projecte està llicenciat sota la llicència MIT. Consulta el fitxer [LICENSE](LICENSE) per a més detalls.
