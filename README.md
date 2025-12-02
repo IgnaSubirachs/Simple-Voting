@@ -37,7 +37,48 @@ Amb aquest contracte podem realitzar les següents accions a la blockchain:
 
 ---
 
-## 🛠️ Instruccions Tècniques
+## � Exemples d'Ús Pràctic
+
+### Exemple 1: Votació en una Associació d'Estudiants
+Una associació d'estudiants vol decidir si organitzar un viatge de fi de curs:
+- **Opcions**: "Sí, volem el viatge" vs "No, preferim altres activitats"
+- **Procés**: El president desplega el contracte, cada estudiant vota pagant una taxa simbòlica, i tothom pot consultar els resultats en temps real fins que el president tanca la votació.
+
+### Exemple 2: Decisió en una Comunitat de Veïns
+Els veïns decideixen si instal·lar plaques solars:
+- **Avantatges**: Cada veí només pot votar una vegada, no es pot manipular el recompte, i els resultats són públics i verificables.
+
+### Exemple 3: Enquesta en una Organització
+Una empresa vol saber l'opinió dels empleats sobre horari flexible:
+- **Beneficis**: Participació anònima, impossibilitat de canviar el vot després, i transparència total en el recompte.
+
+### Flux d'Ús Típic
+
+```bash
+# 1. El propietari desplega el contracte
+./deploy.ps1
+
+# 2. Els participants voten
+./votacions.sh vote-yes    # Participant 1 vota Sí
+./votacions.sh vote-no     # Participant 2 vota No
+./votacions.sh vote-yes    # Participant 3 vota Sí
+
+# 3. Qualsevol pot consultar resultats
+./votacions.sh get-votes   # Resultat: Sí: 2 vots, No: 1 vot
+
+# 4. El propietari tanca la votació
+./votacions.sh close-voting
+```
+
+**Per què usar blockchain per votar?**
+- ✅ **Transparència**: Tothom veu els resultats
+- ✅ **Immutabilitat**: No es poden canviar els vots
+- ✅ **Descentralització**: No depèn d'una autoritat central
+- ✅ **Verificabilitat**: Qualsevol pot comprovar que tot és correcte
+
+---
+
+## �🛠️ Instruccions Tècniques
 
 ### Requisits Previs
 - **mxpy**: Eina de línia de comandes de MultiversX.
